@@ -1,2 +1,3 @@
 # sfdxsample
-this repositoty use for pull and push
+ successfully retrieved from the github and i need to push into the github 
+ 
