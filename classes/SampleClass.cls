@@ -5,6 +5,15 @@ public class SampleClass {
         // Constructor code
     }
 
+    // Instance method
+    public void instanceMethod() {
+        System.debug('This is an instance method.');
+    }
+
+    // Static method
+    public static void staticMethod() {
+        System.debug('This is a static method.');
+    }
 
     // Getter method
     public String getGreeting() {
