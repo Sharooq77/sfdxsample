@@ -18,6 +18,7 @@ public class AnotherClass {
     // Instance method to get the number
     public Integer getNumber() {
         return this.number;
+        //new changes
     }
 
     // Method to calculate the square of an integer
