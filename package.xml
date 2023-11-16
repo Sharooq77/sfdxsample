@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>custommetadata_testclass</members>
-        <members>discountclass</members>
+        <members>CustomMetadataTestClass</members>
+        <members>DiscountClass</members>
         <name>ApexClass</name>
     </types>
     <types>
