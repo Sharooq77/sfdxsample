@@ -4,7 +4,7 @@
 trigger OpportunityTrigger on Opportunity (before insert, before update) {
 
     /**
-     * Applies discount percentage to a list of Opportunities based on custom rules.
+     * * @description Applies discount percentage to a list of Opportunities based on custom rules.
      *
      * @param opps The list of Opportunities to which discounts should be applied.
      */
