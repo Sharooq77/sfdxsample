@@ -24,7 +24,7 @@ public class CustomMetadataTestClass  {
         // Test applying discount
         Test.startTest();
         
-        discountclass.applyDiscount(opp.Customer_Segment__c, opp.Product_Category__c);
+        DiscountClass.applyDiscount(opp.Customer_Segment__c, opp.Product_Category__c);
         Test.stopTest();
  
         // Add assertions as needed

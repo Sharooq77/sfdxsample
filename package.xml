@@ -3,6 +3,8 @@
     <types>
         <members>CustomMetadataTestClass</members>
         <members>DiscountClass</members>
+        <members>custommetadata_testclass</members>
+        <members>discountclass</members>
         <name>ApexClass</name>
     </types>
     <types>
