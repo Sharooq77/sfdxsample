@@ -1,4 +1,15 @@
+/**
+ * The DiscountClass class provides methods for applying discounts based on custom metadata rules.
+ */
 public class DiscountClass {
+
+    /**
+     * Applies a discount based on custom metadata rules.
+     *
+     * @param customerSegment The customer segment for which the discount is being applied.
+     * @param productCategory The product category for which the discount is being applied.
+     * @return The calculated discount percentage.
+     */
     public static Decimal applyDiscount(String customerSegment, String productCategory) {
         Decimal discountPercentage = 0;
 
@@ -7,11 +18,15 @@ public class DiscountClass {
                                            Product_Category__c, Product_Validity__c
                                            FROM Discount_Rules__mdt 
                                            WHERE Customer_Segment__c = :customerSegment 
-                                           AND Product_Category__c = :productCategory
-                                           LIMIT 1];
-        System.debug(rules);
-           discountvalue__c document= discountvalue__c.getValues('demo1');
-            discountvalue__c documents= discountvalue__c.getValues('demo2');
+                                           AND Product_Category__c = :productCategory];
+          
+        // Log rules using INFO level
+        System.debug(LoggingLevel.INFO, rules);
+                                           
+        // Query discount values for specific documents
+        discountvalue__c document = discountvalue__c.getValues('demo1');
+        
+  
 
         // Apply discount based on rules
         for (Discount_Rules__mdt rule : rules) {
