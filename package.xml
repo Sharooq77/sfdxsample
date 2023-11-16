@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>demo_object__c.frist_name__c</members>
+        <members>custommetadata_testclass</members>
+        <members>discountclass</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>OpportunityTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Discount_Rules__mdt.Customer_Segment__c</members>
+        <members>Discount_Rules__mdt.Discount_Percentage__c</members>
+        <members>Discount_Rules__mdt.Product_Category__c</members>
+        <members>Discount_Rules__mdt.Product_Validity__c</members>
+        <members>Discount_Rules__mdt.Rule_Name__c</members>
+        <members>Opportunity.Customer_Segment__c</members>
+        <members>Opportunity.Discount_Percentage__c</members>
+        <members>Opportunity.Product_Category__c</members>
+        <members>discountvalue__c.Discount_Percentage__c</members>
         <name>CustomField</name>
     </types>
     <types>
-        <members>demo_object__c</members>
+        <members>eletronics_lebel</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
+        <members>Discount_Rules__mdt</members>
+        <members>discountvalue__c</members>
         <name>CustomObject</name>
     </types>
-    <version>58.0</version>
+    <types>
+        <members>Discount_Rules__mdt-Discount Rule Layout</members>
+        <members>Opportunity-Formato de oportunidades</members>
+        <name>Layout</name>
+    </types>
+    <version>59.0</version>
 </Package>
