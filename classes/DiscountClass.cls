@@ -13,10 +13,10 @@ public without sharing class DiscountClass {
     public static Decimal applyDiscount(String customerSegment, String productCategory) {
         Decimal discountPercentage = 0;
 
-        List<Discount_Rules__mdt> rules;
+        List<Discount_Rules__mdt> rules = new List<Discount_Rules__mdt>();
 
+        // Query Custom Metadata for applicable rules only if it is accessible
         if (Schema.sObjectType.Discount_Rules__mdt.isAccessible()) {
-            // Query Custom Metadata for applicable rules
             rules = [SELECT Rule_Name__c, Discount_Percentage__c, Customer_Segment__c,
                      Product_Category__c, Product_Validity__c
                      FROM Discount_Rules__mdt 
@@ -25,19 +25,24 @@ public without sharing class DiscountClass {
         }
 
         // Check if there are any rules before trying to access the first one
-        if (rules != null && !rules.isEmpty()) {
+        if (!rules.isEmpty()) {
             // Declare 'rule' outside of the loop
-            Discount_Rules__mdt rule = rules[0];
+            // Discount_Rules__mdt rule = rules[0];
 
+            // Check if the user has permission to read Discount_Rules__mdt fields
             if (Schema.sObjectType.Discount_Rules__mdt.fields.Discount_Percentage__c.isAccessible()) {
                 // Use 'rule' or perform other actions as needed
-                discountPercentage += rule.Discount_Percentage__c;
+                // discountPercentage += rule.Discount_Percentage__c;
+
+                // Now, accumulate discount percentages based on rules
+                for (Discount_Rules__mdt rule : rules) {
+                    discountPercentage += rule.Discount_Percentage__c;
+                }
             }
         }
 
         // Query discount values for specific documents (not used in the current code)
-        //discountvalue__c document = discountvalue__c.getValues('demo1');
-       
+        // discountvalue__c document = discountvalue__c.getValues('demo1');
 
         return discountPercentage;
     }
