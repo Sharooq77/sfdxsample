@@ -3,21 +3,6 @@
  */
 trigger OpportunityTrigger on Opportunity (before insert, before update) {
 
-    /**
-     * * @description Applies discount percentage to a list of Opportunities based on custom rules.
-     *
-     * @param opps The list of Opportunities to which discounts should be applied.
-     */
-    public static void applyDiscountPercentage(List<Opportunity> opps) {
-        for (Opportunity opp : opps) {
-            Decimal discount = DiscountClass.applyDiscount(opp.Customer_Segment__c, opp.Product_Category__c);
-            opp.Discount_Percentage__c = discount;
-        }
-    }
-
-    if (Trigger.isBefore) {
-        if (Trigger.isInsert || Trigger.isUpdate) {
-            applyDiscountPercentage(Trigger.new);
-        }
-    }
+    // Call a handler class to perform the necessary logic
+    OpportunityTriggerHandler.handleOpportunities(Trigger.new);
 }
