@@ -37,7 +37,7 @@ public without sharing class DiscountClass {
 
         // Query discount values for specific documents (not used in the current code)
         discountvalue__c document = discountvalue__c.getValues('demo1');
-        System.debug(LoggingLevel.DEBUG,document);
+       
 
         return discountPercentage;
     }
