@@ -1,23 +1,23 @@
 /**
- * @description This class handles operations related to Opportunities triggered before insert or update.
- */
+* @description This class handles operations related to Opportunities triggered before insert or update.
+*/
 public class OpportunityTriggerHandler {
     
     /**
-     * Applies discount percentage to a list of Opportunities based on custom rules.
-     * @description  frist thing 
-     * @param opps The list of Opportunities to which discounts should be applied.
-     */
+	* Applies discount percentage to a list of Opportunities based on custom rules.
+	*  @description  frist thing 
+	* @param opps The list of Opportunities to which discounts should be applied.
+	*/
     public static void handleOpportunities(List<Opportunity> opps) {
         applyDiscountPercentage(opps);
         // Add other logic as needed
     }
-
+    
     /**
-     * Applies discount percentage to an individual Opportunity based on custom rules.
-     * @description second thing
-     * @param opp The Opportunity to which the discount should be applied.
-     */
+	* @description Applies discount percentage to an individual Opportunity based on custom rules.
+	*
+	* @param opp The Opportunity to which the discount should be applied.
+	*/
     private static void applyDiscountPercentage(List<Opportunity> opps) {
         for (Opportunity opp : opps) {
             Decimal discount = DiscountClass.applyDiscount(opp.Customer_Segment__c, opp.Product_Category__c);
