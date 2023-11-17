@@ -14,10 +14,12 @@ public class OpportunityTriggerHandler {
     }
     
     /**
-	* @description Applies discount percentage to an individual Opportunity based on custom rules.
-	*
-	* @param opp The Opportunity to which the discount should be applied.
-	*/
+     * @description Calculates discounts for each opportunity based on customer segments and 
+     * product categories, and assigns the calculated discount percentage to the
+     * 'Discount_percentage__c' field in the Opportunity object.
+     * 
+     * @param opportunities A list of Opportunity objects for which discounts need to be calculated.
+     */
     private static void applyDiscountPercentage(List<Opportunity> opps) {
         for (Opportunity opp : opps) {
             Decimal discount = DiscountClass.applyDiscount(opp.Customer_Segment__c, opp.Product_Category__c);
