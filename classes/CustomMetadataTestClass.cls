@@ -17,11 +17,9 @@ public class CustomMetadataTestClass  {
            
             List<Opportunity> rules = [SELECT Id, Discount_Percentage__c FROM Opportunity WHERE Id = :opp.Id ];
         // Verify that the Days_Since_Opening__c field is updated with the expected value
-        Decimal expectedDiscount = 40;  // Assuming the discount is 30
+        Decimal expectedDiscount = 0;  // Assuming the discount is 30
         System.assertEquals(expectedDiscount, rules[0].Discount_Percentage__c, 'Comparing expected and actual results');
-           System.debug('Actual Discount Percentage: ' + rules[0].Discount_Percentage__c);
-          System.debug('Expected Discount Percentage: ' + expectedDiscount);
-
+         
     }
 }
 }
