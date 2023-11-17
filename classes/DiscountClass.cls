@@ -13,10 +13,6 @@ public without sharing class DiscountClass {
     public static Decimal applyDiscount(String customerSegment, String productCategory) {
         Decimal discountPercentage = 0;
 
-        if (!Schema.SObjectType.Discount_Rules__mdt.isAccessible()) {
-            return discountPercentage;
-        }
-
         // Query Custom Metadata for applicable rules
         List<Discount_Rules__mdt> rules = [SELECT Rule_Name__c, Discount_Percentage__c, Customer_Segment__c,
                                            Product_Category__c, Product_Validity__c
@@ -24,26 +20,19 @@ public without sharing class DiscountClass {
                                            WHERE Customer_Segment__c = :customerSegment 
                                            AND Product_Category__c = :productCategory];
 
-        if (!Schema.SObjectType.Discount_Rules__mdt.isAccessible()) {
-            return discountPercentage;
+        // Check if there are any rules before trying to access the first one
+        if (!rules.isEmpty()) {
+            // Declare 'rule' outside of the loop
+            Discount_Rules__mdt rule = rules[0];
+
+            if (Schema.sObjectType.Discount_Rules__mdt.fields.Discount_Percentage__c.isAccessible()) {
+                // Use 'rule' or perform other actions as needed
+                discountPercentage += rule.Discount_Percentage__c;
+            }
         }
-
-        if (rules.isEmpty()) {
-            return discountPercentage;
-        }
-
-        // Declare 'rule' outside of the loop
-        Discount_Rules__mdt rule = rules[0];
-
-        if (!Schema.sObjectType.Discount_Rules__mdt.fields.Discount_Percentage__c.isAccessible()) {
-            return discountPercentage;
-        }
-
-        // Use 'rule' or perform other actions as needed
-        discountPercentage += rule.Discount_Percentage__c;
 
         // Query discount values for specific documents (not used in the current code)
-        // discountvalue__c document = discountvalue__c.getValues('demo1');
+         discountvalue__c document = discountvalue__c.getValues('demo1');
 
         return discountPercentage;
     }
