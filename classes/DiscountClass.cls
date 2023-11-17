@@ -13,15 +13,19 @@ public without sharing class DiscountClass {
     public static Decimal applyDiscount(String customerSegment, String productCategory) {
         Decimal discountPercentage = 0;
 
-        // Query Custom Metadata for applicable rules
-        List<Discount_Rules__mdt> rules = [SELECT Rule_Name__c, Discount_Percentage__c, Customer_Segment__c,
-                                           Product_Category__c, Product_Validity__c
-                                           FROM Discount_Rules__mdt 
-                                           WHERE Customer_Segment__c = :customerSegment 
-                                           AND Product_Category__c = :productCategory];
+        List<Discount_Rules__mdt> rules;
+
+        if (Schema.sObjectType.Discount_Rules__mdt.isAccessible()) {
+            // Query Custom Metadata for applicable rules
+            rules = [SELECT Rule_Name__c, Discount_Percentage__c, Customer_Segment__c,
+                     Product_Category__c, Product_Validity__c
+                     FROM Discount_Rules__mdt 
+                     WHERE Customer_Segment__c = :customerSegment 
+                     AND Product_Category__c = :productCategory];
+        }
 
         // Check if there are any rules before trying to access the first one
-        if (!rules.isEmpty()) {
+        if (rules != null && !rules.isEmpty()) {
             // Declare 'rule' outside of the loop
             Discount_Rules__mdt rule = rules[0];
 
@@ -32,7 +36,8 @@ public without sharing class DiscountClass {
         }
 
         // Query discount values for specific documents (not used in the current code)
-         discountvalue__c document = discountvalue__c.getValues('demo1');
+        discountvalue__c document = discountvalue__c.getValues('demo1');
+        system.debug(document);
 
         return discountPercentage;
     }
