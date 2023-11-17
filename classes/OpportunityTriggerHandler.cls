@@ -7,7 +7,7 @@ public class OpportunityTriggerHandler {
      * @description frist
      * Applies discount percentage to a list of Opportunities based on custom rules.
      *
-     * @param opps The list of Opportunities to which discounts should be applied. (Add your description here)
+     * @param opps The list of Opportunities to which discounts should be applied.
      */
     public static void handleOpportunities(List<Opportunity> opps) {
         applyDiscountPercentage(opps);
@@ -18,7 +18,7 @@ public class OpportunityTriggerHandler {
      * @description second 
      * Applies discount percentage to an individual Opportunity based on custom rules.
      *
-     * @param opp The Opportunity to which the discount should be applied.
+     * @param opps The Opportunity to which the discount should be applied.
      */
     private static void applyDiscountPercentage(List<Opportunity> opps) {
         for (Opportunity opp : opps) {
