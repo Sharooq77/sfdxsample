@@ -1,5 +1,15 @@
+/**
+ * @description The DiscountClass class provides methods for applying discounts based on custom metadata rules.
+ */
 public without sharing class DiscountClass {
 
+    /**
+     * @description Applies a discount based on custom metadata rules.
+     *
+     * @param customerSegment The customer segment for which the discount is being applied.
+     * @param productCategory The product category for which the discount is being applied.
+     * @return The calculated discount percentage.
+     */
     public static Decimal applyDiscount(String customerSegment, String productCategory) {
         Decimal discountPercentage = 0;
 
