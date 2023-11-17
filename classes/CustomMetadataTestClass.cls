@@ -3,15 +3,7 @@ public class CustomMetadataTestClass  {
  
      @isTest
     static void testApplyDiscount() {
-        Discount_Rules__mdt rule = new Discount_Rules__mdt(
-            Rule_Name__c = 'Test Rule',
-            Discount_Percentage__c = 10,
-            Customer_Segment__c = label.eletronics_lebel,
-            Product_Category__c = 'mobile',
-            Product_Validity__c = System.today()
-        ); 
-
- 
+       
         Opportunity opp = new Opportunity(
             Name = 'Test Opportunity',
             Customer_Segment__c = 'eletronics',
