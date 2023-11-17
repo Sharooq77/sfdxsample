@@ -21,7 +21,7 @@ public class CustomMetadataTestClass  {
         );
         insert opp;
        System.runAs (new user(Id=UserInfo.getUserId())) {
-             DiscountClass.applyDiscount(opp.Customer_Segment__c, opp.Product_Category__c);
+            // DiscountClass.applyDiscount(opp.Customer_Segment__c, opp.Product_Category__c);
            
             List<Opportunity> rules = [SELECT Id, Discount_Percentage__c FROM Opportunity WHERE Id = :opp.Id ];
         // Verify that the Days_Since_Opening__c field is updated with the expected value

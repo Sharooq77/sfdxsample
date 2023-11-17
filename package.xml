@@ -3,6 +3,7 @@
     <types>
         <members>CustomMetadataTestClass</members>
         <members>DiscountClass</members>
+        <members>OpportunityTriggerHandler</members>
         <name>ApexClass</name>
     </types>
     <types>
