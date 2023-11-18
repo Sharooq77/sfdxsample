@@ -21,13 +21,14 @@ public class CustomMetadataTestClass {
             // Call the method you want to test
             OpportunityTriggerHandler.applyDiscountPercentage(new List<Opportunity>{opp});
 
-            // Query for the updated Opportunity
-            List<Opportunity> updatedOpps = [SELECT Id, Discount_Percentage__c FROM Opportunity WHERE Id = :opp.Id];
-
+          
+            
+            List<Opportunity> updatedOpps = [SELECT Id, Discount_Percentage__c,Product_Category__c,Customer_Segment__c FROM Opportunity WHERE Id = :opp.Id];
+			Decimal d=DiscountClass.applyDiscount( updatedOpps[0].Customer_Segment__c,updatedOpps[0].Product_Category__c);
             // Verify that the Discount_Percentage__c field is updated with the expected value
             System.debug('Expected Discount: ' + expectedDiscount);
             System.debug('Actual Discount: ' + updatedOpps[0].Discount_Percentage__c);
-            System.assertEquals(expectedDiscount, updatedOpps[0].Discount_Percentage__c, 'Comparing expected and actual results');
+            System.assertEquals(expectedDiscount, d, 'Comparing expected and actual results');
         }
     }
 }
