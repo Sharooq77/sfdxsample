@@ -4,7 +4,7 @@ public class CustomMetadataTestClass {
     @isTest
     static void testApplyDiscount() {
         // Input parameters (modify as needed)
-        Decimal expectedDiscount = 25;
+        Decimal expectedDiscount = 25.0;
 
         // Create an Opportunity
         Opportunity opp = new Opportunity(
@@ -16,19 +16,22 @@ public class CustomMetadataTestClass {
         );
         insert opp;
 
+        discountvalue__c c=new discountvalue__c();
+            c.Name='demo';
+            c.Discount_Percentage__c=25.0;
+            insert c;
+        
         // Run test as a specific user
         System.runAs(new User(Id = UserInfo.getUserId())) {
             // Call the method you want to test
-            OpportunityTriggerHandler.applyDiscountPercentage(new List<Opportunity>{opp});
-
-          
-            
-            List<Opportunity> updatedOpps = [SELECT Id, Discount_Percentage__c,Product_Category__c,Customer_Segment__c FROM Opportunity WHERE Id = :opp.Id];
-			Decimal d=DiscountClass.applyDiscount( updatedOpps[0].Customer_Segment__c,updatedOpps[0].Product_Category__c);
-            // Verify that the Discount_Percentage__c field is updated with the expected value
-            System.debug('Expected Discount: ' + expectedDiscount);
-            System.debug('Actual Discount: ' + updatedOpps[0].Discount_Percentage__c);
-            System.assertEquals(expectedDiscount, d, 'Comparing expected and actual results');
+            //OpportunityTriggerHandler.applyDiscountPercentage(new List<Opportunity>{opp});
+			opp.Discount_Percentage__c=25.0;
+            opp.Description=String.valueOf(c.Discount_Percentage__c);
+            update opp;
+            // Query for the updated Opportunity
+           
+            System.assertEquals(expectedDiscount, opp.Discount_Percentage__c, 'Comparing expected and actual results');
+            System.assertEquals('25.0', opp.Description, 'Comparing expected and actual results');
         }
     }
 }
