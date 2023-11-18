@@ -5,10 +5,34 @@
         <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>
         <label>Customer Segment</label>
-        <length>80</length>
         <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>eletronics</fullName>
+                    <default>true</default>
+                    <label>eletronics</label>
+                </value>
+                <value>
+                    <fullName>SmartHome</fullName>
+                    <default>false</default>
+                    <label>SmartHome</label>
+                </value>
+                <value>
+                    <fullName>Gaming</fullName>
+                    <default>false</default>
+                    <label>Gaming</label>
+                </value>
+                <value>
+                    <fullName>Digital Healthcare</fullName>
+                    <default>false</default>
+                    <label>Digital Healthcare</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Discount_Percentage__c</fullName>
@@ -26,10 +50,34 @@
         <externalId>false</externalId>
         <fieldManageability>DeveloperControlled</fieldManageability>
         <label>Product Category</label>
-        <length>80</length>
         <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Smart TVs</fullName>
+                    <default>true</default>
+                    <label>Smart TVs</label>
+                </value>
+                <value>
+                    <fullName>Fitness trackers</fullName>
+                    <default>false</default>
+                    <label>Fitness trackers</label>
+                </value>
+                <value>
+                    <fullName>PS5</fullName>
+                    <default>false</default>
+                    <label>PS5</label>
+                </value>
+                <value>
+                    <fullName>Mobile</fullName>
+                    <default>false</default>
+                    <label>Mobile</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Product_Validity__c</fullName>

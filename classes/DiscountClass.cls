@@ -1,3 +1,4 @@
+/*
 /**
  * @description The DiscountClass class provides methods for applying discounts based on custom metadata rules.
  */
@@ -16,6 +17,7 @@ public without sharing class DiscountClass {
         List<Discount_Rules__mdt> rules = new List<Discount_Rules__mdt>();
         // Query discount values for specific documents 
         discountvalue__c document = discountvalue__c.getValues('demo1');
+        //document.Discount_Percentage__c = 0; // Assign a default value or your intended value
 
         // Query Custom Metadata for applicable rules only if it is accessible
         if (Schema.sObjectType.Discount_Rules__mdt.isAccessible()) {
@@ -25,14 +27,13 @@ public without sharing class DiscountClass {
                      WHERE Customer_Segment__c = :customerSegment 
                      AND Product_Category__c = :productCategory];
         }
-       
+                    
         // Check if there are any rules before trying to access the first one
         if (!rules.isEmpty()) {
             // Declare 'rule' outside of the loop
             // Discount_Rules__mdt rule = rules[0];
             if (Schema.sObjectType.Discount_Rules__mdt.fields.Discount_Percentage__c.isAccessible()) {
                 // Use 'rule' or perform other actions as needed
-               
             }
         }
 

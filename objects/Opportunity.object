@@ -176,12 +176,35 @@
         <fullName>Customer_Segment__c</fullName>
         <externalId>false</externalId>
         <label>Customer Segment</label>
-        <length>80</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>eletronics</fullName>
+                    <default>false</default>
+                    <label>eletronics</label>
+                </value>
+                <value>
+                    <fullName>SmartHome</fullName>
+                    <default>false</default>
+                    <label>SmartHome</label>
+                </value>
+                <value>
+                    <fullName>Gaming</fullName>
+                    <default>false</default>
+                    <label>Gaming</label>
+                </value>
+                <value>
+                    <fullName>Digital Healthcare</fullName>
+                    <default>false</default>
+                    <label>Digital Healthcare</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Description</fullName>
@@ -249,12 +272,35 @@
         <fullName>Product_Category__c</fullName>
         <externalId>false</externalId>
         <label>Product Category</label>
-        <length>80</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Smart TVs</fullName>
+                    <default>false</default>
+                    <label>Smart TVs</label>
+                </value>
+                <value>
+                    <fullName>Fitness trackers</fullName>
+                    <default>false</default>
+                    <label>Fitness trackers</label>
+                </value>
+                <value>
+                    <fullName>PS5</fullName>
+                    <default>false</default>
+                    <label>PS5</label>
+                </value>
+                <value>
+                    <fullName>Mobile</fullName>
+                    <default>false</default>
+                    <label>mobile</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>StageName</fullName>
