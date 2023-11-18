@@ -27,6 +27,13 @@
         <name>CustomLabel</name>
     </types>
     <types>
+        <members>Discount_Rules.SpringFling2023</members>
+        <members>Discount_Rules.SummerSale2023</members>
+        <members>Discount_Rules.game</members>
+        <members>Discount_Rules.health</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
         <members>Discount_Rules__mdt</members>
         <members>discountvalue__c</members>
         <name>CustomObject</name>
