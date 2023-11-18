@@ -9,15 +9,13 @@ public without sharing class DiscountClass {
      *
      * @param customerSegment The customer segment for which the discount is being applied.
      * @param productCategory The product category for which the discount is being applied.
+     * @param document The document variable for specific documents.
      * @return The calculated discount percentage.
      * 
      * @description This method calculates and applies discounts based on custom metadata rules.
      */
-    public static Decimal applyDiscount(String customerSegment, String productCategory) {
+    public static Decimal applyDiscount(String customerSegment, String productCategory, discountvalue__c document) {
         Decimal discountPercentage = 0;
-
-        // Query discount values for specific documents 
-        discountvalue__c customSetting  = discountvalue__c.getValues('demo2');
     
         List<Discount_Rules__mdt> rules = new List<Discount_Rules__mdt>();
 
@@ -29,7 +27,7 @@ public without sharing class DiscountClass {
                      WHERE Customer_Segment__c = :customerSegment 
                      AND Product_Category__c = :productCategory];
         }
-                    
+        
         // Now, accumulate discount percentages based on rules
         for (Discount_Rules__mdt rule : rules) {
             discountPercentage += rule.Discount_Percentage__c;
