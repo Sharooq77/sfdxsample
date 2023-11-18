@@ -14,9 +14,9 @@ public without sharing class DiscountClass {
      * 
      * @description This method calculates and applies discounts based on custom metadata rules.
      */
-    public static Decimal applyDiscount(String customerSegment, String productCategory, discountvalue__c document) {
+    public static Decimal applyDiscount(String customerSegment, String productCategory) {
         Decimal discountPercentage = 0;
-    
+    discountvalue__c document  = discountvalue__c.getValues('demo');
         List<Discount_Rules__mdt> rules = new List<Discount_Rules__mdt>();
 
         // Query Custom Metadata for applicable rules only if it is accessible
