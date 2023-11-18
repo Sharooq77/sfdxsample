@@ -1,11 +1,10 @@
-/*
 /**
- * @description The DiscountClass class provides methods for applying discounts based on custom metadata rules.
+ * The DiscountClass class provides methods for applying discounts based on custom metadata rules.
  */
 public without sharing class DiscountClass {
 
     /**
-     * @description Applies a discount based on custom metadata rules.
+     * Applies a discount based on custom metadata rules.
      *
      * @param customerSegment The customer segment for which the discount is being applied.
      * @param productCategory The product category for which the discount is being applied.
@@ -28,15 +27,6 @@ public without sharing class DiscountClass {
                      AND Product_Category__c = :productCategory];
         }
                     
-        // Check if there are any rules before trying to access the first one
-        if (!rules.isEmpty()) {
-            // Declare 'rule' outside of the loop
-            // Discount_Rules__mdt rule = rules[0];
-            if (Schema.sObjectType.Discount_Rules__mdt.fields.Discount_Percentage__c.isAccessible()) {
-                // Use 'rule' or perform other actions as needed
-            }
-        }
-
         // Now, accumulate discount percentages based on rules
         for (Discount_Rules__mdt rule : rules) {
             discountPercentage += rule.Discount_Percentage__c;
