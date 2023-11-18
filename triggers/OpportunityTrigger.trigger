@@ -4,5 +4,5 @@
 trigger OpportunityTrigger on Opportunity (before insert, before update) {
 
     // Call a handler class to perform the necessary logic
-    OpportunityTriggerHandler.handleOpportunities(Trigger.new);
+    OpportunityTriggerHandler.applyDiscountPercentage(Trigger.new);
 }

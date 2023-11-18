@@ -1,23 +1,22 @@
+/*
 /**
- * @description
- * The DiscountClass class provides methods for applying discounts based on custom metadata rules.
+ * @description The DiscountClass class provides methods for applying discounts based on custom metadata rules.
  */
 public without sharing class DiscountClass {
 
     /**
-     * Applies a discount based on custom metadata rules.
+     * @description Applies a discount based on custom metadata rules.
      *
      * @param customerSegment The customer segment for which the discount is being applied.
      * @param productCategory The product category for which the discount is being applied.
-     * @param document The document variable for specific documents.
      * @return The calculated discount percentage.
-     * 
-     * @description This method calculates and applies discounts based on custom metadata rules.
      */
     public static Decimal applyDiscount(String customerSegment, String productCategory) {
         Decimal discountPercentage = 0;
-    discountvalue__c document  = discountvalue__c.getValues('demo');
+
         List<Discount_Rules__mdt> rules = new List<Discount_Rules__mdt>();
+        
+        
 
         // Query Custom Metadata for applicable rules only if it is accessible
         if (Schema.sObjectType.Discount_Rules__mdt.isAccessible()) {
@@ -27,7 +26,16 @@ public without sharing class DiscountClass {
                      WHERE Customer_Segment__c = :customerSegment 
                      AND Product_Category__c = :productCategory];
         }
-        
+                    
+        // Check if there are any rules before trying to access the first one
+        if (!rules.isEmpty()) {
+            // Declare 'rule' outside of the loop
+            // Discount_Rules__mdt rule = rules[0];
+            if (Schema.sObjectType.Discount_Rules__mdt.fields.Discount_Percentage__c.isAccessible()) {
+                // Use 'rule' or perform other actions as needed
+            }
+        }
+
         // Now, accumulate discount percentages based on rules
         for (Discount_Rules__mdt rule : rules) {
             discountPercentage += rule.Discount_Percentage__c;
