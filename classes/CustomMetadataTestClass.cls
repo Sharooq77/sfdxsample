@@ -1,7 +1,7 @@
-@istest
-public class CustomMetadataTestClass  {
+@isTest
+public class CustomMetadataTestClass {
  
-     @isTest
+    @isTest
     static void testApplyDiscount() {
        
         Opportunity opp = new Opportunity(
@@ -12,15 +12,17 @@ public class CustomMetadataTestClass  {
             StageName = 'Closed Won'
         );
         insert opp;
-       System.runAs (new user(Id=UserInfo.getUserId())) {
-            // DiscountClass.applyDiscount(opp.Customer_Segment__c, opp.Product_Category__c);
-           OpportunityTriggerHandler.applyDiscountPercentage(new List<Opportunity>{opp});
-            List<Opportunity> rules = [SELECT Id, Discount_Percentage__c,Description FROM Opportunity WHERE Id = :opp.Id ];
-        // Verify that the Days_Since_Opening__c field is updated with the expected value
-        Decimal expectedDiscount = 25;  // Assuming the discount is 25
-        System.assertEquals(expectedDiscount, rules[0].Discount_Percentage__c, 'Comparing expected and actual results');
-         System.assertEquals('20.0', rules[0].Description, 'Comparing expected and actual results');
-         
+
+        System.runAs(new user(Id = UserInfo.getUserId())) {
+            OpportunityTriggerHandler.applyDiscountPercentage(new List<Opportunity>{opp});
+            List<Opportunity> updatedOpps = [SELECT Id, Discount_Percentage__c, Description FROM Opportunity WHERE Id = :opp.Id];
+
+            // Verify that the Discount_Percentage__c field is updated with the expected value
+            Decimal expectedDiscount = 25;  // Assuming the discount is 25
+            System.assertEquals(expectedDiscount, updatedOpps[0].Discount_Percentage__c, 'Comparing expected and actual discount percentage');
+
+            // Verify the Description field
+            System.assertEquals('20.0', String.valueOf(updatedOpps[0].Description), 'Comparing expected and actual Description');
+        }
     }
-}
 }
