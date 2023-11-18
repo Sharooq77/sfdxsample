@@ -297,7 +297,7 @@
                 <value>
                     <fullName>Mobile</fullName>
                     <default>false</default>
-                    <label>mobile</label>
+                    <label>Mobile</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
