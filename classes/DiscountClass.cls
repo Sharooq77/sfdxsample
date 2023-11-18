@@ -17,7 +17,7 @@ public without sharing class DiscountClass {
         Decimal discountPercentage = 0;
 
         // Query discount values for specific documents 
-       
+        discountvalue__c customSetting  = discountvalue__c.getValues('demo2');
     
         List<Discount_Rules__mdt> rules = new List<Discount_Rules__mdt>();
 
