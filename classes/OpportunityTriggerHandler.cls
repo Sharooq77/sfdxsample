@@ -11,16 +11,12 @@ public class OpportunityTriggerHandler {
     public static void applyDiscountPercentage(List<Opportunity> opps) {
         // Query discount values for specific documents 
         discountvalue__c document = discountvalue__c.getValues('demo1');
+        
         for (Opportunity opp : opps) {
-            opp.Description=' ';
+            opp.Description = document != null ? String.valueOf(document.Discount_Percentage__c) : '20.0';
+
             Decimal discount = DiscountClass.applyDiscount(opp.Customer_Segment__c, opp.Product_Category__c);
             opp.Discount_Percentage__c = discount;
-            if(opp.Description==null){
-                String s=String.ValueOf(document.Discount_Percentage__c);
-                opp.Description=s;
-            }else{
-                opp.Description='20.0';
-            }
         }
     } 
 }

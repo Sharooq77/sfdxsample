@@ -19,7 +19,7 @@ public class CustomMetadataTestClass {
 
             // Verify that the Discount_Percentage__c field is updated with the expected value
             Decimal expectedDiscount = 25.00;  // Assuming the discount is 25
-            System.assertEquals(expectedDiscount, updatedOpps[0].Discount_Percentage__c, 'Comparing expected and actual discount percentage');
+            System.assertEquals(expectedDiscount.setScale(2), updatedOpps[0].Discount_Percentage__c.setScale(2), 'Comparing expected and actual discount percentage');
 
             // Verify the Description field
             System.assertEquals('20.0', String.valueOf(updatedOpps[0].Description), 'Comparing expected and actual Description');
