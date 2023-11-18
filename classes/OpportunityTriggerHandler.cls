@@ -24,6 +24,8 @@ public class OpportunityTriggerHandler {
         for (Opportunity opp : opps) {
             Decimal discount = DiscountClass.applyDiscount(opp.Customer_Segment__c, opp.Product_Category__c);
             opp.Discount_Percentage__c = discount;
+             discountvalue__c customSetting  = discountvalue__c.getValues('demo1');
+      
         }
     } 
 }
