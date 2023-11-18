@@ -11,17 +11,15 @@ public without sharing class DiscountClass {
      * @param productCategory The product category for which the discount is being applied.
      * @return The calculated discount percentage.
      * 
-     * @description This method calculates and applies discounts based on custom metadata rules. It queries
-     *              relevant information from Discount_Rules__mdt and accumulates the discount percentages
-     *              based on the provided customer segment and product category.
+     * @description This method calculates and applies discounts based on custom metadata rules.
      */
     public static Decimal applyDiscount(String customerSegment, String productCategory) {
         Decimal discountPercentage = 0;
 
-        List<Discount_Rules__mdt> rules = new List<Discount_Rules__mdt>();
         // Query discount values for specific documents 
-        discountvalue__c document = discountvalue__c.getValues('demo1');
-        //document.Discount_Percentage__c = 0; // Assign a default value or your intended value
+       
+    
+        List<Discount_Rules__mdt> rules = new List<Discount_Rules__mdt>();
 
         // Query Custom Metadata for applicable rules only if it is accessible
         if (Schema.sObjectType.Discount_Rules__mdt.isAccessible()) {
