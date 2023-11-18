@@ -173,9 +173,55 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Customer_Segment__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Segment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>eletronics</fullName>
+                    <default>false</default>
+                    <label>eletronics</label>
+                </value>
+                <value>
+                    <fullName>SmartHome</fullName>
+                    <default>false</default>
+                    <label>SmartHome</label>
+                </value>
+                <value>
+                    <fullName>Gaming</fullName>
+                    <default>false</default>
+                    <label>Gaming</label>
+                </value>
+                <value>
+                    <fullName>Digital Healthcare</fullName>
+                    <default>false</default>
+                    <label>Digital Healthcare</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Description</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Discount_Percentage__c</fullName>
+        <externalId>false</externalId>
+        <label>Discount Percentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>ExpectedRevenue</fullName>
@@ -221,6 +267,40 @@
         <fullName>Probability</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Product_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Category</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Smart TVs</fullName>
+                    <default>false</default>
+                    <label>Smart TVs</label>
+                </value>
+                <value>
+                    <fullName>Fitness trackers</fullName>
+                    <default>false</default>
+                    <label>Fitness trackers</label>
+                </value>
+                <value>
+                    <fullName>PS5</fullName>
+                    <default>false</default>
+                    <label>PS5</label>
+                </value>
+                <value>
+                    <fullName>Mobile</fullName>
+                    <default>false</default>
+                    <label>mobile</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>StageName</fullName>
