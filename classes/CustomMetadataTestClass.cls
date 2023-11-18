@@ -18,7 +18,7 @@ public class CustomMetadataTestClass {
             List<Opportunity> updatedOpps = [SELECT Id, Discount_Percentage__c, Description FROM Opportunity WHERE Id = :opp.Id];
 
             // Verify that the Discount_Percentage__c field is updated with the expected value
-            Decimal expectedDiscount = 25;  // Assuming the discount is 25
+            Decimal expectedDiscount = 25.00;  // Assuming the discount is 25
             System.assertEquals(expectedDiscount, updatedOpps[0].Discount_Percentage__c, 'Comparing expected and actual discount percentage');
 
             // Verify the Description field
