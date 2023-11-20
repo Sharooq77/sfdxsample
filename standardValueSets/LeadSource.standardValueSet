@@ -56,4 +56,9 @@
         <default>false</default>
         <label>Otros</label>
     </standardValue>
+    <standardValue>
+        <fullName>Internet</fullName>
+        <default>false</default>
+        <label>Internet</label>
+    </standardValue>
 </StandardValueSet>
