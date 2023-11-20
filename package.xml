@@ -12,6 +12,7 @@
     </types>
     <types>
         <members>Contact-Contact layout</members>
+        <members>Contact-Formato de contactos</members>
         <name>Layout</name>
     </types>
     <types>
@@ -21,6 +22,7 @@
     </types>
     <types>
         <members>Contact.CustomLeadSource</members>
+        <members>Contact.NonLeadSource</members>
         <name>RecordType</name>
     </types>
     <types>
