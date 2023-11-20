@@ -14960,6 +14960,10 @@
         <recordType>Contact.NonLeadSource</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Contact-Formato de contactos</layout>
+        <recordType>Contact.NonLeadSource</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>ContactPointAddress-Formato Dirección de punto de contacto</layout>
     </layoutAssignments>
     <layoutAssignments>
