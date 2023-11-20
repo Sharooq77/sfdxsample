@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>ContactHandler</members>
-        <members>ContactHandlerTest</members>
+        <members>MyMathClass</members>
+        <members>MyMathClassTest</members>
         <name>ApexClass</name>
     </types>
     <types>
+        <members>Contact.Age__c</members>
+        <members>Contact.Date_of_Birth__c</members>
         <members>Contact.Department__c</members>
         <members>Contact.Position__c</members>
         <name>CustomField</name>
@@ -15,7 +17,7 @@
         <name>Layout</name>
     </types>
     <types>
-        <members>Custom Profile</members>
+        <members>Admin</members>
         <members>Standard</members>
         <name>Profile</name>
     </types>
