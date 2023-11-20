@@ -17506,7 +17506,7 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Contact.CustomLeadSource</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>

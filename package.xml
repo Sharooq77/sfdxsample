@@ -6,8 +6,6 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>Contact.Age__c</members>
-        <members>Contact.Date_of_Birth__c</members>
         <members>Contact.Department__c</members>
         <members>Contact.Position__c</members>
         <name>CustomField</name>
