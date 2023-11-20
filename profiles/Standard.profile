@@ -14956,6 +14956,10 @@
         <recordType>Contact.CustomLeadSource</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Contact-Formato de contactos</layout>
+        <recordType>Contact.NonLeadSource</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>ContactPointAddress-Formato Dirección de punto de contacto</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -16279,6 +16283,11 @@
         <default>false</default>
         <recordType>Contact.CustomLeadSource</recordType>
         <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>Contact.NonLeadSource</recordType>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>

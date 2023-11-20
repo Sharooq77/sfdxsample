@@ -665,6 +665,57 @@
             </values>
         </picklistValues>
     </recordTypes>
+    <recordTypes>
+        <fullName>NonLeadSource</fullName>
+        <active>true</active>
+        <label>NonLeadSource</label>
+        <picklistValues>
+            <picklist>Department__c</picklist>
+            <values>
+                <fullName>IT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Position__c</picklist>
+            <values>
+                <fullName>Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Specialist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Representative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System Administrator</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>FULL_NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
