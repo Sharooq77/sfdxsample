@@ -1,51 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>CustomMetadataTestClass</members>
-        <members>DiscountClass</members>
-        <members>OpportunityTriggerHandler</members>
+        <members>MyMathClass</members>
+        <members>MyMathClassTest</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>OpportunityTrigger</members>
-        <name>ApexTrigger</name>
-    </types>
-    <types>
-        <members>Discount_Rules__mdt.Customer_Segment__c</members>
-        <members>Discount_Rules__mdt.Discount_Percentage__c</members>
-        <members>Discount_Rules__mdt.Product_Category__c</members>
-        <members>Discount_Rules__mdt.Product_Validity__c</members>
-        <members>Discount_Rules__mdt.Rule_Name__c</members>
-        <members>Opportunity.Customer_Segment__c</members>
-        <members>Opportunity.Discount_Percentage__c</members>
-        <members>Opportunity.Product_Category__c</members>
-        <members>discountvalue__c.Discount_Percentage__c</members>
+        <members>Contact.Department__c</members>
+        <members>Contact.Position__c</members>
         <name>CustomField</name>
     </types>
     <types>
-        <members>eletronics_lebel</members>
-        <name>CustomLabel</name>
-    </types>
-    <types>
-        <members>Discount_Rules.SpringFling2023</members>
-        <members>Discount_Rules.SummerSale2023</members>
-        <members>Discount_Rules.game</members>
-        <members>Discount_Rules.health</members>
-        <name>CustomMetadata</name>
-    </types>
-    <types>
-        <members>Discount_Rules__mdt</members>
-        <members>discountvalue__c</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>Discount_Rules__mdt-Discount Rule Layout</members>
-        <members>Opportunity-Formato de oportunidades</members>
+        <members>Contact-Contact layout</members>
         <name>Layout</name>
     </types>
     <types>
         <members>Admin</members>
+        <members>Standard</members>
         <name>Profile</name>
+    </types>
+    <types>
+        <members>Contact.CustomLeadSource</members>
+        <name>RecordType</name>
+    </types>
+    <types>
+        <members>LeadSource</members>
+        <name>StandardValueSet</name>
     </types>
     <version>59.0</version>
 </Package>
