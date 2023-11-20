@@ -332,6 +332,17 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Age__c</fullName>
+        <externalId>false</externalId>
+        <label>Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>AssistantName</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -344,8 +355,45 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Date_of_Birth__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Birth</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>Department</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Department__c</fullName>
+        <externalId>false</externalId>
+        <label>Department</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>IT</fullName>
+                    <default>false</default>
+                    <label>IT</label>
+                </value>
+                <value>
+                    <fullName>Sales</fullName>
+                    <default>false</default>
+                    <label>Sales</label>
+                </value>
+                <value>
+                    <fullName>Marketing</fullName>
+                    <default>false</default>
+                    <label>Marketing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Description</fullName>
@@ -430,6 +478,84 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Position__c</fullName>
+        <externalId>false</externalId>
+        <label>Position</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Department__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Developer</fullName>
+                    <default>false</default>
+                    <label>Developer</label>
+                </value>
+                <value>
+                    <fullName>System Administrator</fullName>
+                    <default>false</default>
+                    <label>System Administrator</label>
+                </value>
+                <value>
+                    <fullName>IT Manager</fullName>
+                    <default>false</default>
+                    <label>IT Manager</label>
+                </value>
+                <value>
+                    <fullName>Sales Representative</fullName>
+                    <default>false</default>
+                    <label>Sales Representative</label>
+                </value>
+                <value>
+                    <fullName>Sales Manager</fullName>
+                    <default>false</default>
+                    <label>Sales Manager</label>
+                </value>
+                <value>
+                    <fullName>Marketing Specialist</fullName>
+                    <default>false</default>
+                    <label>Marketing Specialist</label>
+                </value>
+                <value>
+                    <fullName>Marketing Manager</fullName>
+                    <default>false</default>
+                    <label>Marketing Manager</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>IT</controllingFieldValue>
+                <valueName>Developer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>IT</controllingFieldValue>
+                <valueName>System Administrator</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>IT</controllingFieldValue>
+                <valueName>IT Manager</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sales</controllingFieldValue>
+                <valueName>Sales Representative</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sales</controllingFieldValue>
+                <valueName>Sales Manager</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Marketing</controllingFieldValue>
+                <valueName>Marketing Specialist</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Marketing</controllingFieldValue>
+                <valueName>Marketing Manager</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>Pronouns</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
@@ -488,6 +614,57 @@
         </filters>
         <label>New This Week</label>
     </listViews>
+    <recordTypes>
+        <fullName>CustomLeadSource</fullName>
+        <active>true</active>
+        <label>CustomLeadSource</label>
+        <picklistValues>
+            <picklist>Department__c</picklist>
+            <values>
+                <fullName>IT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Position__c</picklist>
+            <values>
+                <fullName>Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Specialist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Representative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System Administrator</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>FULL_NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
