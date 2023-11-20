@@ -11,10 +11,6 @@
         <name>CustomField</name>
     </types>
     <types>
-        <members>Contact-Formato de contactos</members>
-        <name>Layout</name>
-    </types>
-    <types>
         <members>Admin</members>
         <members>Standard</members>
         <name>Profile</name>
