@@ -1,8 +1,7 @@
 public class MyMathClass {
 
-    /**
-     * Adds two numbers and returns the result.
-     *
+    /** 
+     * @description Adds two numbers and returns the result.
      * @param num1 The first number.
      * @param num2 The second number.
      * @return The sum of num1 and num2.
@@ -12,8 +11,7 @@ public class MyMathClass {
     }
 
     /**
-     * Multiplies two numbers and returns the result.
-     *
+     * @description Multiplies two numbers and returns the result
      * @param num1 The first number.
      * @param num2 The second number.
      * @return The product of num1 and num2.
