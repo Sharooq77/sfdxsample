@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>demo_object__c.frist_name__c</members>
+        <members>ContactHandler</members>
+        <members>ContactHandlerTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Contact.Department__c</members>
+        <members>Contact.Position__c</members>
         <name>CustomField</name>
     </types>
     <types>
-        <members>demo_object__c</members>
-        <name>CustomObject</name>
+        <members>Contact-Contact layout</members>
+        <name>Layout</name>
     </types>
-    <version>58.0</version>
+    <types>
+        <members>Custom Profile</members>
+        <members>Standard</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Contact.CustomLeadSource</members>
+        <name>RecordType</name>
+    </types>
+    <types>
+        <members>LeadSource</members>
+        <members>LeadSource</members>
+        <name>StandardValueSet</name>
+    </types>
+    <version>59.0</version>
 </Package>
