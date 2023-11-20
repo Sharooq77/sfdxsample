@@ -25,7 +25,6 @@
     </types>
     <types>
         <members>LeadSource</members>
-        <members>LeadSource</members>
         <name>StandardValueSet</name>
     </types>
     <version>59.0</version>
