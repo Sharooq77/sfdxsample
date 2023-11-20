@@ -41,10 +41,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>LinkedInProfile__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>AnniversaryDate__c</field>
             </layoutItems>
             <layoutItems>
