@@ -12,4 +12,12 @@ public class SimpleApexClassTest {
         Integer result = SimpleApexClass.addNumbers(5, 7);
         System.assertEquals(12, result, 'Addition should be successful.');
     }
+
+    @isTest
+    static void testRunWithSpecialPermissions() {
+        // Add your test logic inside the System.runAs() block if needed
+        System.runAs(new User(Id = UserInfo.getUserId())) {
+            // Your test logic here
+        }
+    }
 }

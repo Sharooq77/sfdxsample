@@ -1,8 +1,11 @@
+/**
+ * SimpleApexClass: Contains methods for string concatenation and addition of numbers.
+ */
 public class SimpleApexClass {
 
     /**
-     * Simple method that concatenates two strings.
-     *
+     * Concatenates two strings.
+     * @description
      * @param str1 The first string.
      * @param str2 The second string.
      * @return The concatenated string.
@@ -12,8 +15,8 @@ public class SimpleApexClass {
     }
 
     /**
-     * Simple method that adds two numbers.
-     *
+     * Adds two numbers together.
+     * @description
      * @param num1 The first number.
      * @param num2 The second number.
      * @return The sum of num1 and num2.

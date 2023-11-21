@@ -2,7 +2,7 @@ public class OpportunityTotalCalculator {
 
     /**
      * Calculates the total amount for a list of opportunities.
-     *
+     * @description
      * @param opportunities The list of opportunities.
      * @return The total amount of all opportunities.
      */
