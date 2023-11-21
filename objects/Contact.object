@@ -332,6 +332,25 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Age__c</fullName>
+        <externalId>false</externalId>
+        <label>Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AnniversaryDate__c</fullName>
+        <externalId>false</externalId>
+        <label>AnniversaryDate</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>AssistantName</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
@@ -342,6 +361,42 @@
     <fields>
         <fullName>Birthdate</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>ContactRating__c</fullName>
+        <externalId>false</externalId>
+        <label>ContactRating</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CustomerFeedback__c</fullName>
+        <externalId>false</externalId>
+        <label>CustomerFeedback</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CustomerSince__c</fullName>
+        <externalId>false</externalId>
+        <label>CustomerSince</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_Birth__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Birth</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
     </fields>
     <fields>
         <fullName>Department</fullName>
@@ -358,6 +413,16 @@
     <fields>
         <fullName>Email</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>EmergencyContact__c</fullName>
+        <externalId>false</externalId>
+        <label>EmergencyContact</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Fax</fullName>
@@ -390,6 +455,16 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>JobTitle__c</fullName>
+        <externalId>false</externalId>
+        <label>JobTitle</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>LastCURequestDate</fullName>
     </fields>
     <fields>
@@ -401,8 +476,24 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>LinkedInProfile__c</fullName>
+        <externalId>false</externalId>
+        <label>LinkedInProfile</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
         <fullName>MailingAddress</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>MarketingOptIn__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>MarketingOptIn</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>MobilePhone</fullName>
@@ -411,6 +502,14 @@
     <fields>
         <fullName>Name</fullName>
         <trackFeedHistory>true</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>NewsletterSubscription__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>NewsletterSubscription</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>OtherAddress</fullName>
@@ -428,6 +527,26 @@
     <fields>
         <fullName>Phone</fullName>
         <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>PreferredCurrency__c</fullName>
+        <externalId>false</externalId>
+        <label>PreferredCurrency</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>PreferredTimezone__c</fullName>
+        <externalId>false</externalId>
+        <label>PreferredTimezone</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Pronouns</fullName>
