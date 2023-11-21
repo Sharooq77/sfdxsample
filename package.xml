@@ -1,36 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Contact.Age__c</members>
-        <members>Contact.AnniversaryDate__c</members>
-        <members>Contact.ContactRating__c</members>
-        <members>Contact.CustomerFeedback__c</members>
-        <members>Contact.CustomerSince__c</members>
-        <members>Contact.Date_of_Birth__c</members>
-        <members>Contact.EmergencyContact__c</members>
-        <members>Contact.JobTitle__c</members>
-        <members>Contact.LinkedInProfile__c</members>
-        <members>Contact.MarketingOptIn__c</members>
-        <members>Contact.NewsletterSubscription__c</members>
-        <members>Contact.PreferredCurrency__c</members>
-        <members>Contact.PreferredTimezone__c</members>
-        <name>CustomField</name>
-    </types>
-    <types>
-        <members>Contact-Contact layout</members>
-        <members>Contact-Formato de contactos</members>
-        <name>Layout</name>
-    </types>
-    <types>
-        <members>Contact_Permission_set</members>
-        <name>PermissionSet</name>
-    </types>
-    <types>
-        <members>Admin</members>
-        <members>Custom Profile</members>
-        <members>Custom standard profile</members>
-        <members>Standard</members>
-        <name>Profile</name>
+        <members>OpportunityTotalCalculator</members>
+        <members>OpportunityTotalCalculatorTest</members>
+        <members>SimpleApexClass</members>
+        <members>SimpleApexClassTest</members>
+        <name>ApexClass</name>
     </types>
     <version>59.0</version>
 </Package>
