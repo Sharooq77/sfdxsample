@@ -6910,6 +6910,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.Age__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.AnniversaryDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contact.AssistantName</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6921,6 +6931,26 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Birthdate</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.ContactRating__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.CustomerFeedback__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.CustomerSince__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Date_of_Birth__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6946,6 +6976,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Email</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.EmergencyContact__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6980,7 +7015,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.JobTitle__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contact.LeadSource</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.LinkedInProfile__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6990,7 +7035,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.MarketingOptIn__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contact.MobilePhone</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.NewsletterSubscription__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7011,6 +7066,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Position__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.PreferredCurrency__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.PreferredTimezone__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -14931,7 +14996,7 @@
         <layout>CommunityMemberLayout-Community Member Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Contact-Formato de contactos</layout>
+        <layout>Contact-Contact layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>ContactPointAddress-Formato Dirección de punto de contacto</layout>
