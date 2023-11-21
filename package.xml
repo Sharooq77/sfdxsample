@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>MyMathClass</members>
+        <members>MyMathClassTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Contact.Department__c</members>
+        <members>Contact.Position__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
         <members>Admin</members>
-        <members>Custom Profile</members>
-        <members>Custom standard profile</members>
+        <members>Standard</members>
         <name>Profile</name>
+    </types>
+    <types>
+        <members>Contact.CustomLeadSource</members>
+        <members>Contact.NonLeadSource</members>
+        <name>RecordType</name>
+    </types>
+    <types>
+        <members>LeadSource</members>
+        <name>StandardValueSet</name>
     </types>
     <version>59.0</version>
 </Package>
