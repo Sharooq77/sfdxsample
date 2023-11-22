@@ -4,5 +4,9 @@
         <members>Account.pull_request__c</members>
         <name>CustomField</name>
     </types>
+    <types>
+        <members>Admin</members>
+        <name>Profile</name>
+    </types>
     <version>59.0</version>
 </Package>
